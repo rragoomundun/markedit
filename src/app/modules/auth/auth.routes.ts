@@ -6,6 +6,7 @@ import { Register } from './components/register/register';
 import { RegisterConfirm } from './components/register-confirm/register-confirm';
 import { Login } from './components/login/login';
 import { PasswordForgotten } from './components/password-forgotten/password-forgotten';
+import { ResetPassword } from './components/reset-password/reset-password';
 
 const routes: Routes = [
   {
@@ -39,6 +40,11 @@ const routes: Routes = [
             path: 'forgotten',
             component: PasswordForgotten,
             data: { title: 'PASSWORD_FORGOTTEN_PAGE.TITLE' },
+          },
+          {
+            path: 'reset/:resetPasswordToken',
+            component: ResetPassword,
+            data: { title: 'RESET_PASSWORD_PAGE.TITLE' },
           },
         ],
       },

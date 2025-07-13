@@ -10,6 +10,8 @@
     "PASSWORD_CONFIRMATION": "Password Confirmation",
     "SUBMIT": "Submit",
     "SUBMITTING": "Submitting",
+    "MODIFY": "Modify",
+    "MODIFYING": "Modyfying...",
     "ERRORS": {
       "NO_ACCOUNT_FOR_EMAIL": "There are no account associated to this e-mail",
       "NOT_EMAIL": "This e-mail address is invalid.",
@@ -61,6 +63,14 @@
       "UNCONFIRMED": "This account is unconfirmed.",
       "ALREADY_RECOVERING": "A recovery procedure is already is progress.",
       "EMAIL_SENDING_FAILED": "Cannot send recovery e-mail."
+    }
+  },
+  "RESET_PASSWORD_PAGE": {
+    "TITLE": "Reset Password",
+    "ENTER_PASSWORD": "Enter your new password below.",
+    "SUCCESS": "Your password has been changed. You are going to be redirected...",
+    "ERRORS": {
+      "INVALID_TOKEN": "Impossible to set a new password."
     }
   }
 }

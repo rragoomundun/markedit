@@ -33,4 +33,14 @@ export class Auth {
   forgotPassword(params: Object): Observable<Object> {
     return this.http.post(`${this.API_PREFIX}/password/forgot`, params);
   }
+
+  resetPassword(
+    params: Object,
+    resetPasswordToken: string,
+  ): Observable<Object> {
+    return this.http.post(
+      `${this.API_PREFIX}/password/reset/${resetPasswordToken}`,
+      params,
+    );
+  }
 }
