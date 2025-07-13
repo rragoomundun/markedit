@@ -8,7 +8,10 @@
     "EMAIL": "E-Mail",
     "PASSWORD": "Password",
     "PASSWORD_CONFIRMATION": "Password Confirmation",
+    "SUBMIT": "Submit",
+    "SUBMITTING": "Submitting",
     "ERRORS": {
+      "NO_ACCOUNT_FOR_EMAIL": "There are no account associated to this e-mail",
       "NOT_EMAIL": "This e-mail address is invalid.",
       "EMAIL_IN_USE": "This e-mail address is already in use.",
       "PASSWORD_MIN_LENGTH_8": "The password must have at least 8 characters.",
@@ -48,6 +51,16 @@
     "ERRORS": {
       "INVALID": "The data entered is invalid.",
       "UNCONFIRMED": "This account is unconfirmed."
+    }
+  },
+  "PASSWORD_FORGOTTEN_PAGE": {
+    "TITLE": "Password Forgotten",
+    "ENTER_EMAIL": "Enter your e-mail address below in order to recover your account.",
+    "SUCCESS": "An email has been sent to this adress. Please consult it in order to recover your account.",
+    "ERRORS": {
+      "UNCONFIRMED": "This account is unconfirmed.",
+      "ALREADY_RECOVERING": "A recovery procedure is already is progress.",
+      "EMAIL_SENDING_FAILED": "Cannot send recovery e-mail."
     }
   }
 }
