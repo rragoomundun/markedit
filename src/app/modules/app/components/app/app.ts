@@ -4,6 +4,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { Auth } from '../../../auth/services/auth/auth';
+import { Store } from '../../../../shared/services/store/store';
 
 @Component({
   selector: 'app-app',
@@ -14,13 +15,14 @@ import { Auth } from '../../../auth/services/auth/auth';
 export class App {
   constructor(
     private router: Router,
-
     private authService: Auth,
+    private storeService: Store,
   ) {}
 
   onLogoutClick(): void {
     this.authService.logout().subscribe({
       complete: () => {
+        this.storeService.user = null;
         this.router.navigate(['/auth/login']);
       },
     });

@@ -12,6 +12,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Input } from '../../../../shared/components/input/input';
 
 import { Auth } from '../../services/auth/auth';
+import { Store } from '../../../../shared/services/store/store';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,10 @@ export class Login {
   onLogin: string;
   loginError: string;
 
-  constructor(private authService: Auth) {
+  constructor(
+    private authService: Auth,
+    private storeService: Store,
+  ) {
     this.formGroup = new FormGroup({
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
