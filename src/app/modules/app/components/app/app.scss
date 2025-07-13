@@ -1,0 +1,36 @@
+#this {
+  display: flex;
+  flex-direction: row;
+
+  #this-left-panel {
+    width: 100%;
+    max-width: 300px;
+    height: 100vh;
+    padding: 1rem;
+    box-shadow: 0px 0px var(--app-shadow-blur) var(--app-shadow-spread)
+      var(--app-shadow-color);
+
+    nav:first-child {
+      .dropdown-menu.show {
+        width: 100%;
+      }
+
+      a {
+        color: var(--bs-gray-900);
+      }
+    }
+
+    a {
+      display: block;
+      text-decoration: none;
+      transition: var(--app-transition-time);
+      padding: 0.5rem;
+      border-radius: var(--bs-border-radius);
+    }
+
+    a:hover {
+      background-color: var(--app-highlight-color);
+      transition: var(--app-transition-time);
+    }
+  }
+}

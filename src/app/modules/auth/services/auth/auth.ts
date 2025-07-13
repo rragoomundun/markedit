@@ -43,4 +43,10 @@ export class Auth {
       params,
     );
   }
+
+  logout(): Observable<Object> {
+    return this.http.get(`${this.API_PREFIX}/logout`, {
+      withCredentials: true,
+    });
+  }
 }

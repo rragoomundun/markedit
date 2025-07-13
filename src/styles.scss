@@ -72,3 +72,21 @@ body {
   background-color: var(--app-color-primary-active);
   transition: var(--app-transition-time);
 }
+
+.dropdown-menu.show {
+  border: none;
+  padding: 0;
+  box-shadow: 0px 0px var(--app-shadow-blur) var(--app-shadow-spread)
+    var(--app-shadow-color);
+
+  .dropdown-item {
+    border-radius: var(--bs-border-radius);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition: var(--app-transition-time);
+  }
+
+  .dropdown-item:hover {
+    transition: var(--app-transition-time);
+  }
+}

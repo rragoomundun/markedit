@@ -1,0 +1,28 @@
+<div id="this">
+  <div id="this-left-panel">
+    <nav>
+      <div ngbDropdown>
+        <a href="javascript:void(0)" ngbDropdownToggle>
+          <span class="fas fa-circle-user"></span>
+
+          &nbsp;
+
+          <span> User name </span>
+        </a>
+
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem (click)="onLogoutClick()">
+            <span class="fa-solid fa-arrow-right-from-bracket"></span>
+
+            &nbsp;
+
+            <span>{{ "APP_CONTAINER.LOGOUT" | translate }}</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+</div>

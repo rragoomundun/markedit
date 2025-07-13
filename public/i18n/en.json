@@ -72,5 +72,8 @@
     "ERRORS": {
       "INVALID_TOKEN": "Impossible to set a new password."
     }
+  },
+  "APP_CONTAINER": {
+    "LOGOUT": "Logout"
   }
 }
