@@ -3,7 +3,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Auth } from '../../services/auth/auth';
-import { Translation } from '../../../../shared/services/translation/translation';
 
 @Component({
   selector: 'app-register-confirm',
@@ -17,7 +16,6 @@ export class RegisterConfirm {
   constructor(
     private activatedRoute: ActivatedRoute,
     private authService: Auth,
-    private translationService: Translation,
   ) {
     this.onRegisterConfirm = 'false';
   }

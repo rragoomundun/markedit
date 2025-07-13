@@ -41,6 +41,10 @@ body {
 
 /* Bootstrap customization */
 .input-group {
+  .form-control {
+    border-radius: var(--bs-border-radius) !important;
+  }
+
   .form-control,
   .form-select,
   .form-floating {

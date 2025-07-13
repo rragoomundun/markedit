@@ -23,4 +23,10 @@ export class Auth {
       { withCredentials: true },
     );
   }
+
+  login(params: Object): Observable<Object> {
+    return this.http.post(`${this.API_PREFIX}/login`, params, {
+      withCredentials: true,
+    });
+  }
 }

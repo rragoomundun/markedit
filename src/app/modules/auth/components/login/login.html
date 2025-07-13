@@ -1,0 +1,58 @@
+<div class="card app-auth-card">
+  <div class="card-body">
+    <h6 class="card-title text-center">
+      {{ "LOGIN_PAGE.TITLE" | translate }}
+    </h6>
+
+    <hr />
+
+    <form [formGroup]="formGroup" (submit)="onSubmit()">
+      <div class="mb-3">
+        <app-input
+          [id]="'this-email'"
+          [label]="'GENERAL.EMAIL' | translate"
+          [labelIcon]="'fa-regular fa-envelope'"
+          [type]="'email'"
+          [control]="'email'"
+          [error]="formErrors.email"
+        >
+        </app-input>
+      </div>
+
+      <div class="mb-3">
+        <app-input
+          [id]="'this-password'"
+          [label]="'GENERAL.PASSWORD' | translate"
+          [labelIcon]="'fa-solid fa-lock'"
+          [type]="'password'"
+          [control]="'password'"
+          [error]="formErrors.password"
+        >
+        </app-input>
+      </div>
+
+      <div class="text-end mb-3">
+        <a routerLink="/auth/password/forgotten">
+          {{ "LOGIN_PAGE.PASSWORD_FORGOTTEN" | translate }}
+        </a>
+      </div>
+
+      <div class="text-center">
+        @if (onLogin === "error") {
+          <p class="text-danger">{{ loginError | translate }}</p>
+        }
+
+        @if (["false", "error"].includes(onLogin)) {
+          <button [disabled]="formGroup.invalid" class="btn btn-primary">
+            {{ "LOGIN_PAGE.LOGIN" | translate }}
+          </button>
+        } @else if (onLogin === "true") {
+          <button [disabled]="true" class="btn btn-primary">
+            <span class="fa-solid fa-spinner fa-spin"></span>
+            {{ "LOGIN_PAGE.LOGIN..." | translate }}
+          </button>
+        }
+      </div>
+    </form>
+  </div>
+</div>
