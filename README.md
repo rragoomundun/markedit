@@ -20,6 +20,8 @@ npm run build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+---
+
 - Version: 0.1.0
 - License: MIT
 - Author: Raphael Ragoomundun
