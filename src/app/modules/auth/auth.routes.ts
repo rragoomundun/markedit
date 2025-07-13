@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { Auth } from './components/auth/auth';
 import { Register } from './components/register/register';
+import { RegisterConfirm } from './components/register-confirm/register-confirm';
 
 const routes: Routes = [
   {
@@ -18,6 +19,11 @@ const routes: Routes = [
         path: 'register',
         component: Register,
         data: { title: 'REGISTER_PAGE.TITLE' },
+      },
+      {
+        path: 'register/confirm/:confirmationToken',
+        component: RegisterConfirm,
+        data: { title: 'REGISTER_CONFIRM_PAGE.TITLE' },
       },
     ],
   },

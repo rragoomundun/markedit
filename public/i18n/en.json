@@ -33,5 +33,11 @@
     "ERRORS": {
       "ACCOUNT_CREATION": "Impossible to create your account. Try again later."
     }
+  },
+  "REGISTER_CONFIRM_PAGE": {
+    "TITLE": "Account Confirmation",
+    "CONFIRMING": "Confirming your account...",
+    "SUCCESS": "Your account has been confirmed. You are going to be redirected...",
+    "ERROR": "Impossible to confirm this account."
   }
 }

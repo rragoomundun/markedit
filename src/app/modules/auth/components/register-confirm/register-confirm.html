@@ -1,0 +1,25 @@
+<div class="card app-auth-card">
+  <div class="card-body text-center">
+    <h6 class="card-title">
+      {{ "REGISTER_CONFIRM_PAGE.TITLE" | translate }}
+    </h6>
+
+    <hr />
+
+    @if (onRegisterConfirm === "true") {
+      <span class="fa-solid fa-spinner fa-spin fa-2x"></span>
+
+      <p>{{ "REGISTER_CONFIRM_PAGE.CONFIRMING" | translate }}</p>
+    } @else if (onRegisterConfirm === "error") {
+      <p class="text-danger">
+        <span class="fa-regular fa-circle-xmark"></span>
+        {{ "REGISTER_CONFIRM_PAGE.ERROR" | translate }}
+      </p>
+    } @else if (onRegisterConfirm === "success") {
+      <p class="text-success">
+        <span class="fa-regular fa-circle-check"></span>
+        {{ "REGISTER_CONFIRM_PAGE.SUCCESS" | translate }}
+      </p>
+    }
+  </div>
+</div>
