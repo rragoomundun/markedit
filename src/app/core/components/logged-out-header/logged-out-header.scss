@@ -1,0 +1,39 @@
+header {
+  box-shadow: 0 0 var(--app-shadow-blur) var(--app-shadow-spread)
+    var(--app-shadow-color);
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+    li:first-child {
+      float: left;
+
+      a {
+        font-weight: bold;
+      }
+    }
+
+    li:nth-last-of-type(-n + 2) {
+      float: right;
+    }
+
+    li {
+      a {
+        display: block;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        color: var(--bs-body-color);
+        transition: var(--app-transition-time);
+      }
+
+      a:hover {
+        background-color: var(--app-highlight-color);
+        transition: var(--app-transition-time);
+      }
+    }
+  }
+}

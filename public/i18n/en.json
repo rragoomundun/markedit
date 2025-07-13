@@ -1,0 +1,37 @@
+{
+  "APP": {
+    "TITLE": "Markedit",
+    "AUTHOR": "Raphael Ragoomundun"
+  },
+  "GENERAL": {
+    "NAME": "Name",
+    "EMAIL": "E-Mail",
+    "PASSWORD": "Password",
+    "PASSWORD_CONFIRMATION": "Password Confirmation",
+    "ERRORS": {
+      "NOT_EMAIL": "This e-mail address is invalid.",
+      "EMAIL_IN_USE": "This e-mail address is already in use.",
+      "PASSWORD_MIN_LENGTH_8": "The password must have at least 8 characters.",
+      "PASSWORD_NOT_STRONG": "The password is not strong enough. A strong password must contains at least eight characters, one uppercase letter, one lowercase letter, one number, and one special character.",
+      "PASSWORD_CONFIRMATION_NO_MATCH": "The confirmed password does not match the password."
+    }
+  },
+  "LOGGEDOUT_HEADER": {
+    "REGISTER": "Register",
+    "LOGIN": "Login"
+  },
+  "LOGGEDOUT_FOOTER": {
+    "TOS": "Terms of Use",
+    "PRIVACY": "Privacy Policy"
+  },
+  "REGISTER_PAGE": {
+    "TITLE": "Register on Markedit",
+    "TERMS": "By registering on Markedit you agree to our <a href='https://markedit.net/terms-of-use' target='_blank'>Terms of Service</a> and <a href='https://markedit.net/privacy-policy' target='_blank'>Privacy Policy</a>.",
+    "REGISTER": "Register",
+    "REGISTRATION": "Registration...",
+    "REGISTRATION_SUCCESSFUL": "Registration successful. An email has been sent to your address. Consult it to confirm your account.",
+    "ERRORS": {
+      "ACCOUNT_CREATION": "Impossible to create your account. Try again later."
+    }
+  }
+}

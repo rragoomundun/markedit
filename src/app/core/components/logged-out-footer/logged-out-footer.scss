@@ -1,0 +1,41 @@
+footer {
+  margin: 1rem 0;
+
+  ul {
+    list-style-type: none;
+    margin: 0 0.5rem;
+    padding: 0;
+    overflow: hidden;
+
+    li,
+    li a {
+      color: var(--bs-secondary);
+      transition: var(--app-transition-time);
+    }
+
+    li a:hover {
+      color: var(--bs-body-color);
+      transition: var(--app-transition-time);
+    }
+
+    li:first-child {
+      float: left;
+
+      a {
+        font-weight: bold;
+      }
+    }
+
+    li:nth-last-of-type(-n + 2) {
+      float: right;
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+    li:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+}

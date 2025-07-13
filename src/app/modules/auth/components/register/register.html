@@ -1,0 +1,86 @@
+<div class="card app-auth-card">
+  <div class="card-body">
+    <h6 class="card-title text-center">
+      {{ "REGISTER_PAGE.TITLE" | translate }}
+    </h6>
+
+    <hr />
+
+    <form [formGroup]="formGroup" (submit)="onSubmit()">
+      <div class="mb-3">
+        <app-input
+          [id]="'this-name'"
+          [label]="'GENERAL.NAME' | translate"
+          [labelIcon]="'fa-regular fa-circle-user'"
+          [type]="'text'"
+          [control]="'name'"
+          [error]="formErrors.name"
+        >
+        </app-input>
+      </div>
+
+      <div class="mb-3">
+        <app-input
+          [id]="'this-email'"
+          [label]="'GENERAL.EMAIL' | translate"
+          [labelIcon]="'fa-regular fa-envelope'"
+          [type]="'email'"
+          [control]="'email'"
+          [error]="formErrors.email"
+        >
+        </app-input>
+      </div>
+
+      <div class="mb-3">
+        <app-input
+          [id]="'this-password'"
+          [label]="'GENERAL.PASSWORD' | translate"
+          [labelIcon]="'fa-solid fa-lock'"
+          [type]="'password'"
+          [control]="'password'"
+          [error]="formErrors.password"
+        >
+        </app-input>
+      </div>
+
+      <div class="mb-3">
+        <app-input
+          [id]="'this-password-confirmation'"
+          [label]="'GENERAL.PASSWORD_CONFIRMATION' | translate"
+          [labelIcon]="'fa-solid fa-lock'"
+          [type]="'password'"
+          [control]="'passwordConfirmation'"
+          [error]="formErrors.passwordConfirmation"
+        >
+        </app-input>
+      </div>
+
+      <div class="mb-3">
+        <small [innerHTML]="'REGISTER_PAGE.TERMS' | translate"></small>
+      </div>
+
+      <div class="text-center">
+        <div class="text-center">
+          @if (onRegister === "error") {
+            <p class="text-danger">{{ registerError | translate }}</p>
+          }
+          @if (["false", "error"].includes(onRegister)) {
+            <button [disabled]="formGroup.invalid" class="btn btn-primary">
+              {{ "REGISTER_PAGE.REGISTER" | translate }}
+            </button>
+          } @else if (onRegister === "true") {
+            <button [disabled]="true" class="btn btn-primary">
+              <span class="fa-solid fa-spinner fa-spin"></span>
+              {{ "REGISTER_PAGE.REGISTRATION" | translate }}
+            </button>
+          } @else {
+            <small class="text-success">
+              <span class="fa-regular fa-circle-check"></span>
+              {{ "REGISTER_PAGE.REGISTRATION_SUCCESSFUL" | translate }}
+            </small>
+          }
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

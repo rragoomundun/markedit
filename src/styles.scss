@@ -1,6 +1,70 @@
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 
+/* Custom variables */
+:root {
+  --app-shadow-blur: 10px;
+  --app-shadow-spread: 5px;
+  --app-shadow-color: #ddd;
+
+  --app-highlight-color: #eee;
+
+  --app-transition-time: 0.2s;
+
+  --app-color-primary-inactive: #333;
+  --app-color-primary-active: #000;
+}
+
+/* Custom CSS */
+
 body {
   font-family: Inter;
+}
+
+/* App classes*/
+.app-auth-card {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 100px;
+  border: none;
+  box-shadow: 0px 0px var(--app-shadow-blur) var(--app-shadow-spread)
+    var(--app-shadow-color);
+
+  .card-title {
+    margin: 1.5rem 0;
+  }
+
+  .card-body {
+    padding-top: 0;
+  }
+}
+
+/* Bootstrap customization */
+.input-group {
+  .form-control,
+  .form-select,
+  .form-floating {
+    transition: var(--app-transition-time);
+  }
+
+  .form-control:focus,
+  .form-select:focus,
+  .form-floating:focus-within {
+    box-shadow: none;
+    border-color: var(--bs-body-color);
+    transition: var(--app-transition-time);
+  }
+}
+
+.btn-primary,
+.btn-primary:disabled {
+  border-color: var(--app-color-primary-inactive);
+  background-color: var(--app-color-primary-inactive);
+  transition: var(--app-transition-time);
+}
+
+.btn-primary:hover {
+  border-color: var(--app-color-primary-active);
+  background-color: var(--app-color-primary-active);
+  transition: var(--app-transition-time);
 }
