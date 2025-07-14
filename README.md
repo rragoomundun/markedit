@@ -22,6 +22,6 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 ---
 
-- Version: 0.1.0
+- Version: 0.3.0
 - License: MIT
 - Author: Raphael Ragoomundun
