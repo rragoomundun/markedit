@@ -8,7 +8,9 @@ const routes: Routes = [
   {
     path: '',
     component: App,
-    children: [{ path: '', component: Home }],
+    children: [
+      { path: '', component: Home, data: { title: 'HOME_PAGE.TITLE' } },
+    ],
   },
 ];
 

@@ -1,1 +1,7 @@
-<router-outlet></router-outlet>
+@if (onGetUser === "true") {
+  <div id="this-loading">
+    <div>{{ "APP.LOADING" | translate }}</div>
+  </div>
+} @else {
+  <router-outlet></router-outlet>
+}

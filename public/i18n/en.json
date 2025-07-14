@@ -1,7 +1,8 @@
 {
   "APP": {
     "TITLE": "Markedit",
-    "AUTHOR": "Raphael Ragoomundun"
+    "AUTHOR": "Raphael Ragoomundun",
+    "LOADING": "Markedit is loading..."
   },
   "GENERAL": {
     "NAME": "Name",
@@ -75,5 +76,8 @@
   },
   "APP_CONTAINER": {
     "LOGOUT": "Logout"
+  },
+  "HOME_PAGE": {
+    "TITLE": "Home"
   }
 }
