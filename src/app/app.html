@@ -1,7 +1,3 @@
-@if (onGetUser === "true") {
-  <div id="this-loading">
-    <div>{{ "APP.LOADING" | translate }}</div>
-  </div>
-} @else {
+@if (onGetUser !== "true") {
   <router-outlet></router-outlet>
 }

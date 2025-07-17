@@ -1,0 +1,43 @@
+<div class="app-settings-container">
+  <form [formGroup]="formGroup">
+    <div class="mb-3">
+      <app-input
+        [id]="'this-name'"
+        [label]="'GENERAL.NAME' | translate"
+        [labelIcon]="'fa-regular fa-circle-user'"
+        [type]="'text'"
+        [control]="'name'"
+        [error]="formErrors.name"
+      >
+      </app-input>
+    </div>
+
+    <div class="mb-3">
+      <app-input
+        [id]="'this-email'"
+        [label]="'GENERAL.EMAIL' | translate"
+        [labelIcon]="'fa-regular fa-envelope'"
+        [type]="'email'"
+        [control]="'email'"
+        [error]="formErrors.email"
+      >
+      </app-input>
+    </div>
+  </form>
+
+  <footer>
+    @if (["false", "success", "error"].includes(onUpdate)) {
+      <button
+        [disabled]="formGroup.invalid"
+        (click)="onUpdateClick()"
+        class="btn btn-primary"
+      >
+        {{ "GENERAL.UPDATE" | translate }}
+      </button>
+    } @else {
+      <button [disabled]="true" class="btn btn-primary">
+        {{ "GENERAL.UPDATING" | translate }}
+      </button>
+    }
+  </footer>
+</div>

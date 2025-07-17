@@ -19,4 +19,10 @@ export class User {
       withCredentials: true,
     });
   }
+
+  updateIdentity(params: Object): Observable<Object> {
+    return this.http.put(`${this.API_PREFIX}/identity`, params, {
+      withCredentials: true,
+    });
+  }
 }

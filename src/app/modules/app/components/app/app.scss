@@ -6,7 +6,7 @@
     width: 100%;
     max-width: 300px;
     height: 100vh;
-    padding: 1rem;
+    padding: var(--app-padding);
     box-shadow: 0px 0px var(--app-shadow-blur) var(--app-shadow-spread)
       var(--app-shadow-color);
 

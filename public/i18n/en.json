@@ -13,6 +13,8 @@
     "SUBMITTING": "Submitting",
     "MODIFY": "Modify",
     "MODIFYING": "Modyfying...",
+    "UPDATE": "Update",
+    "UPDATING": "Updating...",
     "ERRORS": {
       "NO_ACCOUNT_FOR_EMAIL": "There are no account associated to this e-mail",
       "NOT_EMAIL": "This e-mail address is invalid.",
@@ -79,5 +81,13 @@
   },
   "HOME_PAGE": {
     "TITLE": "Home"
+  },
+  "LEFT_PANEL": {
+    "SETTINGS": "Settings"
+  },
+  "SETTINGS_MODAL": {
+    "IDENTITY": "Identity",
+    "SECURITY": "Security",
+    "DELETE_ACCOUNT": "Delete Account"
   }
 }

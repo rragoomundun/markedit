@@ -18,6 +18,14 @@
 
             <span>{{ "APP_CONTAINER.LOGOUT" | translate }}</span>
           </button>
+
+          <button ngbDropdownItem (click)="onSettingsClick()">
+            <span class="fa-solid fa-gears"></span>
+
+            &nbsp;
+
+            <span>{{ "LEFT_PANEL.SETTINGS" | translate }}</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -26,3 +34,5 @@
     <router-outlet></router-outlet>
   </div>
 </div>
+
+<app-settings></app-settings>

@@ -1,0 +1,63 @@
+<ng-template #content let-modal>
+  <div class="modal-body">
+    <nav>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a
+            [class.active]="view === 'IDENTITY'"
+            (click)="setView('IDENTITY')"
+            class="nav-link"
+            href="javascript:void(0)"
+          >
+            <span class="fa-regular fa-circle-user"></span>
+
+            &nbsp;
+
+            <span>{{ "SETTINGS_MODAL.IDENTITY" | translate }}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [class.active]="view === 'SECURITY'"
+            (click)="setView('SECURITY')"
+            class="nav-link"
+            href="javascript:void(0)"
+          >
+            <span class="fa-solid fa-lock"></span>
+
+            &nbsp;
+
+            <span>{{ "SETTINGS_MODAL.SECURITY" | translate }}</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [class.active]="view === 'DELETE_ACCOUNT'"
+            (click)="setView('DELETE_ACCOUNT')"
+            class="nav-link"
+            href="javascript:void(0)"
+          >
+            <span class="fa-solid fa-trash-can"></span>
+
+            &nbsp;
+
+            <span>{{ "SETTINGS_MODAL.DELETE_ACCOUNT" | translate }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      @switch (view) {
+        @case ("IDENTITY") {
+          <app-settings-identity></app-settings-identity>
+        }
+        @case ("SECURITY") {
+          <app-settings-security></app-settings-security>
+        }
+        @case ("DELETE_ACCOUNT") {
+          <app-settings-delete-account></app-settings-delete-account>
+        }
+      }
+    </div>
+  </div>
+</ng-template>

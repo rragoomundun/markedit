@@ -1,18 +1,1 @@
-#this-loading {
-  margin-top: 40vh;
-  text-align: center;
 
-  div {
-    display: inline;
-    margin: auto;
-    font-weight: bold;
-    font-size: 30px;
-    animation: l1 1s linear infinite alternate;
-  }
-}
-
-@keyframes l1 {
-  to {
-    opacity: 0;
-  }
-}
