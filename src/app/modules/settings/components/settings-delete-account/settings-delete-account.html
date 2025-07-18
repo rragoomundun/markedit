@@ -1,1 +1,43 @@
-<p>settings-delete-account works!</p>
+<div class="app-settings-container">
+  <form [formGroup]="formGroup">
+    <p
+      [innerHTML]="'SETTINGS_MODAL.DELETE_TAB.DELETE_WARNING' | translate"
+      class="text-danger"
+    ></p>
+
+    <div class="mb-3">
+      <app-input
+        [id]="'this-confirmation-string'"
+        [label]="'SETTINGS_MODAL.DELETE_TAB.DELETE_ACCOUNT' | translate"
+        [labelIcon]="'fa-solid fa-trash-can'"
+        [type]="'text'"
+        [control]="'confirmationString'"
+        [placeholder]="'SETTINGS_MODAL.DELETE_TAB.DELETE_LOWERCASE' | translate"
+      ></app-input>
+    </div>
+  </form>
+
+  <footer>
+    @if (onDelete === "success") {
+      <small class="text-success">
+        {{ "SETTINGS_MODAL.DELETE_TAB.ACCOUNT_DELETED" | translate }}
+      </small>
+    } @else if (onDelete === "false") {
+      <button
+        [disabled]="formGroup.invalid"
+        (click)="onDeleteClick()"
+        class="btn btn-danger"
+      >
+        {{ "SETTINGS_MODAL.DELETE_TAB.DELETE" | translate }}
+      </button>
+    } @else {
+      <button class="btn btn-danger">
+        <span class="fas fa-spinner fa-spin"></span>
+
+        &nbsp;
+
+        <span>{{ "SETTINGS_MODAL.DELETE_TAB.DELETE" | translate }}</span>
+      </button>
+    }
+  </footer>
+</div>

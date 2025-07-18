@@ -55,7 +55,9 @@
           <app-settings-security></app-settings-security>
         }
         @case ("DELETE_ACCOUNT") {
-          <app-settings-delete-account></app-settings-delete-account>
+          <app-settings-delete-account
+            (deleted)="closeModal()"
+          ></app-settings-delete-account>
         }
       }
     </div>

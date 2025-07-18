@@ -32,6 +32,10 @@ export class Settings {
     this.modalService.open(this.modalContent, { size: 'lg' });
   }
 
+  closeModal(): void {
+    this.modalService.dismissAll();
+  }
+
   setView(view: string): void {
     this.view = view;
   }

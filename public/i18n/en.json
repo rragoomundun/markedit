@@ -94,6 +94,14 @@
     },
     "SECURITY_TAB": {
       "PASSWORD_UPDATED": "The password has been updated."
+    },
+    "DELETE_TAB": {
+      "DELETE_WARNING": "To delete your account please enter <span class='fst-italic'>delete</span> in the field below and then click on the delete button. WARNING: THIS OPERATION IS IRREVERSIBLE AND WILL DELETE ALL YOUR DATA.",
+      "DELETE_ACCOUNT": "Delete Account",
+      "DELETE": "Delete",
+      "DELETE_LOWERCASE": "delete",
+      "DELETING": "DELETING...",
+      "ACCOUNT_DELETED": "Your account has been deleted. You are going to be redirected..."
     }
   }
 }

@@ -31,4 +31,8 @@ export class User {
       withCredentials: true,
     });
   }
+
+  deleteAccount(): Observable<Object> {
+    return this.http.delete(this.API_PREFIX, { withCredentials: true });
+  }
 }
