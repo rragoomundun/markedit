@@ -10,6 +10,10 @@
     border-top-left-radius: var(--bs-modal-border-radius);
     border-bottom-left-radius: var(--bs-modal-border-radius);
     background-color: #f9f9f9;
+
+    .nav-item {
+      margin-bottom: var(--app-list-margin-bottom);
+    }
   }
 
   div {

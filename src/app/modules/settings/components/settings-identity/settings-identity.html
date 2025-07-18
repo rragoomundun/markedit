@@ -26,6 +26,14 @@
   </form>
 
   <footer>
+    @if (onUpdate === "success") {
+      <small class="text-success">
+        {{ "SETTINGS_MODAL.IDENTITY_TAB.INFORMATION_UPDATED" | translate }}
+      </small>
+
+      <br /><br />
+    }
+
     @if (["false", "success", "error"].includes(onUpdate)) {
       <button
         [disabled]="formGroup.invalid"

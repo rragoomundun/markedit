@@ -28,6 +28,7 @@ export class Settings {
   }
 
   openModal(): void {
+    this.view = 'IDENTITY';
     this.modalService.open(this.modalContent, { size: 'lg' });
   }
 

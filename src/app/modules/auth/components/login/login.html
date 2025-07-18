@@ -39,7 +39,7 @@
 
       <div class="text-center">
         @if (onLogin === "error") {
-          <p class="text-danger">{{ loginError | translate }}</p>
+          <small class="text-danger">{{ loginError | translate }}</small>
         }
 
         @if (["false", "error"].includes(onLogin)) {

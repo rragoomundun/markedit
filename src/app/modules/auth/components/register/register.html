@@ -62,7 +62,7 @@
       <div class="text-center">
         <div class="text-center">
           @if (onRegister === "error") {
-            <p class="text-danger">{{ registerError | translate }}</p>
+            <small class="text-danger">{{ registerError | translate }}</small>
           }
           @if (["false", "error"].includes(onRegister)) {
             <button [disabled]="formGroup.invalid" class="btn btn-primary">

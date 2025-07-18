@@ -1,1 +1,51 @@
-<p>settings-security works!</p>
+<div class="app-settings-container">
+  <form [formGroup]="formGroup">
+    <div class="mb-3">
+      <app-input
+        [id]="'this-password'"
+        [label]="'GENERAL.PASSWORD' | translate"
+        [labelIcon]="'fa-solid fa-lock'"
+        [type]="'password'"
+        [control]="'password'"
+        [error]="formErrors.password"
+      ></app-input>
+    </div>
+
+    <div class="mb-3">
+      <app-input
+        [id]="'this-password-confirmation'"
+        [label]="'GENERAL.PASSWORD_CONFIRMATION' | translate"
+        [labelIcon]="'fa-solid fa-lock'"
+        [type]="'password'"
+        [control]="'passwordConfirmation'"
+        [error]="formErrors.passwordConfirmation"
+      ></app-input>
+    </div>
+  </form>
+
+  <footer>
+    @if (onUpdate === "error") {
+      <small class="text-danger">{{ error | translate }}</small>
+    } @else if (onUpdate === "success") {
+      <small class="text-success">
+        {{ "SETTINGS_MODAL.SECURITY_TAB.PASSWORD_UPDATED" | translate }}
+      </small>
+
+      <br /><br />
+    }
+
+    @if (["false", "success", "error"].includes(onUpdate)) {
+      <button
+        [disabled]="formGroup.invalid"
+        (click)="onUpdateClick()"
+        class="btn btn-primary"
+      >
+        {{ "GENERAL.UPDATE" | translate }}
+      </button>
+    } @else {
+      <button [disabled]="true" class="btn btn-primary">
+        {{ "GENERAL.UPDATING" | translate }}
+      </button>
+    }
+  </footer>
+</div>

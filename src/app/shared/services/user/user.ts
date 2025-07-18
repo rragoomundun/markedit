@@ -25,4 +25,10 @@ export class User {
       withCredentials: true,
     });
   }
+
+  updatePassword(params: Object): Observable<Object> {
+    return this.http.put(`${this.API_PREFIX}/password`, params, {
+      withCredentials: true,
+    });
+  }
 }

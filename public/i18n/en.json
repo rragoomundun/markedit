@@ -88,6 +88,12 @@
   "SETTINGS_MODAL": {
     "IDENTITY": "Identity",
     "SECURITY": "Security",
-    "DELETE_ACCOUNT": "Delete Account"
+    "DELETE_ACCOUNT": "Delete Account",
+    "IDENTITY_TAB": {
+      "INFORMATION_UPDATED": "The identity information has been updated."
+    },
+    "SECURITY_TAB": {
+      "PASSWORD_UPDATED": "The password has been updated."
+    }
   }
 }

@@ -11,10 +11,10 @@
 
       <p>{{ "REGISTER_CONFIRM_PAGE.CONFIRMING" | translate }}</p>
     } @else if (onRegisterConfirm === "error") {
-      <p class="text-danger">
+      <small class="text-danger">
         <span class="fa-regular fa-circle-xmark"></span>
         {{ "REGISTER_CONFIRM_PAGE.ERROR" | translate }}
-      </p>
+      </small>
     } @else if (onRegisterConfirm === "success") {
       <small class="text-success">
         <span class="fa-regular fa-circle-check"></span>
