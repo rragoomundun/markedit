@@ -1,6 +1,6 @@
 {
   "name": "markedit",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -33,6 +33,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.6",
     "rxjs": "~7.8.0",
+    "socket.io": "^4.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
